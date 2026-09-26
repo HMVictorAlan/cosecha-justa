@@ -148,7 +148,7 @@
       function pintar(verProducto) {
         figura.setAttribute("data-estado", verProducto ? "despues" : "antes");
         boton.setAttribute("aria-pressed", String(verProducto));
-        boton.textContent = verProducto ? "Ver cosecha" : "Ver producto";
+        boton.textContent = verProducto ? "Ver cosecha" : "Ver terminado";
         antes.setAttribute("aria-hidden", String(verProducto));
         despues.setAttribute("aria-hidden", String(!verProducto));
         marca.textContent = verProducto ? "Producto" : "Cosecha";
@@ -167,6 +167,60 @@
         var paso = galeria.clientWidth * 0.8 * Number(boton.getAttribute("data-galeria"));
         var suave = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         galeria.scrollBy({ left: paso, behavior: suave ? "smooth" : "auto" });
+      });
+    });
+
+    /* ---------- Tarjetas que revelan qué hacemos (Inicio) ---------- */
+    function abrirTarjeta(tarjeta, abrir) {
+      var b = tarjeta.querySelector(".revela-boton");
+      tarjeta.classList.toggle("abierta", abrir);
+      b.setAttribute("aria-expanded", String(abrir));
+      tarjeta.querySelector(".revela-panel a").tabIndex = abrir ? 0 : -1;
+    }
+    document.querySelectorAll(".revela").forEach(function (tarjeta) {
+      abrirTarjeta(tarjeta, false);
+      tarjeta.querySelector(".revela-boton").addEventListener("click", function () {
+        abrirTarjeta(tarjeta, !tarjeta.classList.contains("abierta"));
+      });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      var abierta = document.activeElement && document.activeElement.closest && document.activeElement.closest(".revela.abierta");
+      if (abierta) {
+        abrirTarjeta(abierta, false);
+        abierta.querySelector(".revela-boton").focus();
+      }
+    });
+
+    /* ---------- Página de producto: miniaturas ---------- */
+    var fotoPrincipal = document.querySelector(".foto-principal");
+    document.querySelectorAll(".miniatura").forEach(function (mini) {
+      mini.addEventListener("click", function () {
+        fotoPrincipal.src = mini.getAttribute("data-foto");
+        fotoPrincipal.alt = mini.getAttribute("data-alt");
+        document.querySelectorAll(".miniatura").forEach(function (m) {
+          m.setAttribute("aria-pressed", String(m === mini));
+        });
+      });
+    });
+
+    /* ---------- Página de producto: cantidad y carrito (maqueta) ---------- */
+    document.querySelectorAll("form.compra").forEach(function (compra) {
+      var campo = compra.querySelector("input[name='cantidad']");
+      var aviso = compra.querySelector(".aviso-compra");
+      function limitar(n) { return Math.min(99, Math.max(1, Math.round(Number(n)) || 1)); }
+      compra.querySelectorAll(".paso-cant").forEach(function (b) {
+        b.addEventListener("click", function () {
+          campo.value = limitar(Number(campo.value) + Number(b.getAttribute("data-cambio")));
+        });
+      });
+      compra.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var n = limitar(campo.value);
+        campo.value = n;
+        var total = n * Number(compra.getAttribute("data-precio"));
+        aviso.textContent = "Agregaste " + n + " × " + compra.getAttribute("data-producto") +
+          " ($" + total.toLocaleString("es-MX") + "). Es una maqueta: no se hace ningún cobro.";
       });
     });
 

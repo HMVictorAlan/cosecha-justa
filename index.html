@@ -115,31 +115,62 @@
     <section class="seccion" aria-labelledby="titulo-motivos">
       <div class="contenedor">
         <h2 id="titulo-motivos">¿Por qué se tira?</h2>
-        <div class="foto-rejilla">
-          <article class="foto-tarjeta">
-            <img src="img/fea.jpg" alt="Fresa deforme" width="675" height="900" loading="lazy">
-            <div class="foto-texto">
-              <h3>No se ve bonita</h3>
+        <p class="nota">Toca una foto para ver qué hacemos.</p>
+        <div>
+          <ul class="revela-rejilla">
+            <li><div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="r-fea">
+              <img src="img/fea.jpg" alt="Fresa deforme" width="675" height="900" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">No se ve bonita</span>
+                <span class="pildora"><span class="abrir">¿Qué hacemos? +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="r-fea">
+              <p>No la juzgamos por su forma. La compramos por lote y la convertimos en productos donde la forma no importa.</p>
+              <a href="producto.html?camino=lote#empezar">Vender por lote <span aria-hidden="true">→</span></a>
             </div>
-          </article>
-          <article class="foto-tarjeta">
-            <img src="img/madura.jpg" alt="Plátanos muy maduros con manchas negras" width="900" height="784" loading="lazy">
-            <div class="foto-texto">
-              <h3>Maduró rápido</h3>
+          </div></li>
+            <li><div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="r-madura">
+              <img src="img/madura.jpg" alt="Plátanos muy maduros con manchas negras" width="900" height="784" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">Maduró rápido</span>
+                <span class="pildora"><span class="abrir">¿Qué hacemos? +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="r-madura">
+              <p>La fruta muy madura es la más dulce: ideal para mermelada. En el taller aprendes a transformarla.</p>
+              <a href="producto.html#taller">Ver el taller <span aria-hidden="true">→</span></a>
             </div>
-          </article>
-          <article class="foto-tarjeta">
-            <img src="img/camion-carga.jpg" alt="Camioneta sobrecargada con costales de cosecha" width="900" height="675" loading="lazy">
-            <div class="foto-texto">
-              <h3>Sin transporte</h3>
+          </div></li>
+            <li><div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="r-transporte">
+              <img src="img/camion-carga.jpg" alt="Camioneta sobrecargada con costales de cosecha" width="900" height="675" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">Sin transporte</span>
+                <span class="pildora"><span class="abrir">¿Qué hacemos? +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="r-transporte">
+              <p>Recogemos en tu parcela en día y hora fijos. Tú no pagas el flete.</p>
+              <a href="producto.html#vender">Cómo funciona <span aria-hidden="true">→</span></a>
             </div>
-          </article>
-          <article class="foto-tarjeta">
-            <img src="img/precio-bajo.jpg" alt="Papayas en un mercado con un letrero de 10 pesos el kilo" width="900" height="900" loading="lazy">
-            <div class="foto-texto">
-              <h3>Precio injusto</h3>
+          </div></li>
+            <li><div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="r-precio">
+              <img src="img/precio-bajo.jpg" alt="Papayas en un mercado con un letrero de 10 pesos el kilo" width="900" height="900" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">Precio injusto</span>
+                <span class="pildora"><span class="abrir">¿Qué hacemos? +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="r-precio">
+              <p>Precio público, acordado en asamblea y más alto que el del intermediario. Te pagamos el mismo día.</p>
+              <a href="producto.html?camino=lote#empezar">Vender por lote <span aria-hidden="true">→</span></a>
             </div>
-          </article>
+          </div></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -153,55 +184,128 @@
             <button type="button" class="galeria-btn" data-galeria="1" aria-label="Ver más cosechas">→</button>
           </div>
         </div>
+        <p class="nota">Toca una cosecha para ver qué hacemos con ella.</p>
         <div class="galeria" tabindex="0" role="region" aria-label="Galería de cosechas que rescatamos">
           <ul class="galeria-pista">
             <li class="galeria-item">
-              <figure>
-                <img src="img/mango.jpg" alt="Dos mangos maduros, uno entero y otro partido" width="900" height="600" loading="lazy">
-                <figcaption>Mango</figcaption>
-              </figure>
+          <div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="g-mango">
+              <img src="img/mango.jpg" alt="Dos mangos maduros, uno entero y otro partido" width="900" height="600" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">Mango</span>
+                <span class="pildora"><span class="abrir">Ver +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="g-mango">
+              <p>Lo convertimos en mango enchilado.</p>
+              <a href="mango-enchilado.html">Ver producto <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
             </li>
             <li class="galeria-item">
-              <figure>
-                <img src="img/jitomate.jpg" alt="Racimos de jitomates rojos" width="900" height="600" loading="lazy">
-                <figcaption>Jitomate</figcaption>
-              </figure>
+          <div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="g-jitomate">
+              <img src="img/jitomate.jpg" alt="Racimos de jitomates rojos" width="900" height="600" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">Jitomate</span>
+                <span class="pildora"><span class="abrir">Ver +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="g-jitomate">
+              <p>Va a nuestra salsa de molcajete.</p>
+              <a href="salsa-molcajete.html">Ver producto <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
             </li>
             <li class="galeria-item">
-              <figure>
-                <img src="img/chile.jpg" alt="Montón de chiles verdes" width="900" height="599" loading="lazy">
-                <figcaption>Chile</figcaption>
-              </figure>
+          <div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="g-chile">
+              <img src="img/chile.jpg" alt="Montón de chiles verdes" width="900" height="599" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">Chile</span>
+                <span class="pildora"><span class="abrir">Ver +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="g-chile">
+              <p>Le da el picor a la salsa de molcajete.</p>
+              <a href="salsa-molcajete.html">Ver producto <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
             </li>
             <li class="galeria-item">
-              <figure>
-                <img src="img/fresa.jpg" alt="Tazón con fresas frescas" width="900" height="778" loading="lazy">
-                <figcaption>Fresa</figcaption>
-              </figure>
+          <div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="g-fresa">
+              <img src="img/fresa.jpg" alt="Tazón con fresas frescas" width="900" height="778" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">Fresa</span>
+                <span class="pildora"><span class="abrir">Ver +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="g-fresa">
+              <p>La más madura se vuelve mermelada con piloncillo.</p>
+              <a href="mermelada-fresa.html">Ver producto <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
             </li>
             <li class="galeria-item">
-              <figure>
-                <img src="img/guayaba.jpg" alt="Guayabas maduras, dos partidas a la mitad" width="900" height="679" loading="lazy">
-                <figcaption>Guayaba</figcaption>
-              </figure>
+          <div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="g-guayaba">
+              <img src="img/guayaba.jpg" alt="Guayabas maduras, dos partidas a la mitad" width="900" height="679" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">Guayaba</span>
+                <span class="pildora"><span class="abrir">Ver +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="g-guayaba">
+              <p>Se vuelve mermelada. Aprende a hacerla en el taller.</p>
+              <a href="producto.html?camino=taller#empezar">Ver el taller <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
             </li>
             <li class="galeria-item">
-              <figure>
-                <img src="img/platano.jpg" alt="Racimos de plátanos con manchas" width="900" height="598" loading="lazy">
-                <figcaption>Plátano</figcaption>
-              </figure>
+          <div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="g-platano">
+              <img src="img/platano.jpg" alt="Racimos de plátanos con manchas" width="900" height="598" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">Plátano</span>
+                <span class="pildora"><span class="abrir">Ver +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="g-platano">
+              <p>Lo compramos por lote, aunque tenga manchas.</p>
+              <a href="producto.html?camino=lote#empezar">Vender por lote <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
             </li>
             <li class="galeria-item">
-              <figure>
-                <img src="img/aguacate.jpg" alt="Aguacate entero y otro partido" width="900" height="600" loading="lazy">
-                <figcaption>Aguacate</figcaption>
-              </figure>
+          <div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="g-aguacate">
+              <img src="img/aguacate.jpg" alt="Aguacate entero y otro partido" width="900" height="600" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">Aguacate</span>
+                <span class="pildora"><span class="abrir">Ver +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="g-aguacate">
+              <p>Lo compramos por lote para cocinas y fondas aliadas.</p>
+              <a href="producto.html?camino=lote#empezar">Vender por lote <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
             </li>
             <li class="galeria-item">
-              <figure>
-                <img src="img/limon.jpg" alt="Limón entero y otro partido" width="900" height="432" loading="lazy">
-                <figcaption>Limón</figcaption>
-              </figure>
+          <div class="revela">
+            <button type="button" class="revela-boton" aria-expanded="false" aria-controls="g-limon">
+              <img src="img/limon.jpg" alt="Limón entero y otro partido" width="900" height="432" loading="lazy">
+              <span class="revela-pie">
+                <span class="revela-titulo">Limón</span>
+                <span class="pildora"><span class="abrir">Ver +</span><span class="cerrar">Cerrar ×</span></span>
+              </span>
+            </button>
+            <div class="revela-panel" id="g-limon">
+              <p>Lo compramos por lote; también sazona la salsa y el mango.</p>
+              <a href="producto.html?camino=lote#empezar">Vender por lote <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
             </li>
           </ul>
         </div>
@@ -217,6 +321,7 @@
               <img src="img/cocinar.jpg" alt="" width="900" height="675" loading="lazy">
               <span class="foto-boton-texto">
                 <span class="foto-boton-titulo">Transfórmala</span>
+                <span class="foto-boton-desc">Haz mango enchilado, salsa o mermelada. Vale hasta 10 veces más.</span>
                 <span class="pildora">Taller gratis <span aria-hidden="true">→</span></span>
               </span>
             </a>
@@ -226,6 +331,7 @@
               <img src="img/cajas.jpg" alt="" width="900" height="687" loading="lazy">
               <span class="foto-boton-texto">
                 <span class="foto-boton-titulo">Véndela por lote</span>
+                <span class="foto-boton-desc">Recogemos en tu parcela y te pagamos el mismo día.</span>
                 <span class="pildora">Empezar <span aria-hidden="true">→</span></span>
               </span>
             </a>
@@ -235,6 +341,7 @@
               <img src="img/mercado.jpg" alt="" width="900" height="805" loading="lazy">
               <span class="foto-boton-texto">
                 <span class="foto-boton-titulo">Véndela cerca</span>
+                <span class="foto-boton-desc">Tianguis, fondas y tiendas de tu región.</span>
                 <span class="pildora">Ver dónde <span aria-hidden="true">→</span></span>
               </span>
             </a>
@@ -244,6 +351,7 @@
               <img src="img/donar.jpg" alt="" width="900" height="600" loading="lazy">
               <span class="foto-boton-texto">
                 <span class="foto-boton-titulo">Dónala</span>
+                <span class="foto-boton-desc">Llega a familias que la necesitan.</span>
                 <span class="pildora">Ir al banco<span class="sr-only"> (sitio externo)</span> <span aria-hidden="true">↗</span></span>
               </span>
             </a>
@@ -253,6 +361,7 @@
               <img src="img/composta.jpg" alt="" width="676" height="900" loading="lazy">
               <span class="foto-boton-texto">
                 <span class="foto-boton-titulo">Composta</span>
+                <span class="foto-boton-desc">Lo que no se come se vuelve abono o alimento animal.</span>
                 <span class="pildora">La compramos <span aria-hidden="true">→</span></span>
               </span>
             </a>

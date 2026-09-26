@@ -646,3 +646,123 @@ html[data-enlaces="activo"] .foto-boton { outline: 4px solid #ffe14d; background
   .foto-boton:hover { transform: translateY(-4px); box-shadow: 0 12px 26px rgba(60, 40, 20, .25); }
   .foto-boton:hover img { transform: scale(1.06); }
 }
+
+/* ---------- Descripciones en botones y productos ---------- */
+.foto-boton-desc { font-size: .95rem; line-height: 1.35; color: #f3eadf; }
+.foto-boton-desc:empty { display: none; }
+.foto-boton { aspect-ratio: 3 / 4.4; }
+.producto-taller h3 a { color: var(--texto); text-decoration: none; }
+.producto-taller h3 a:hover { text-decoration: underline; }
+.producto-taller .desc { color: var(--texto-suave); margin: 0 0 .6rem; }
+.btn-chico { min-height: 44px; padding: .5rem 1rem; margin-top: .9rem; font-size: 1rem; }
+
+/* ---------- Página de producto (formato de tienda) ---------- */
+.articulo-seccion { padding-top: 2rem; }
+.migas ol { list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-wrap: wrap; gap: .4rem; font-size: .95rem; color: var(--texto-suave); }
+.migas li + li::before { content: "/"; margin-right: .4rem; color: var(--borde); }
+.migas a { color: var(--texto-suave); }
+.articulo { display: grid; gap: 2.5rem; grid-template-columns: 1.1fr .9fr; align-items: start; }
+@media (max-width: 820px) { .articulo { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+.articulo-foto { border-radius: 18px; overflow: hidden; background: var(--superficie); box-shadow: 0 6px 18px rgba(60, 40, 20, .15); }
+.foto-principal { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.miniaturas { list-style: none; padding: 0; margin: .9rem 0 0; display: flex; gap: .6rem; }
+.miniatura {
+  width: 80px; height: 80px; padding: 0; border-radius: 10px; overflow: hidden; cursor: pointer;
+  border: 3px solid transparent; background: none;
+}
+.miniatura img { width: 100%; height: 100%; object-fit: cover; }
+.miniatura[aria-pressed="true"] { border-color: var(--acento); }
+.miniatura:hover { border-color: var(--texto-suave); }
+.articulo-desc { margin-top: 1.25rem; color: var(--texto-suave); }
+
+.articulo-compra h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: .2rem; }
+.articulo-sub { color: var(--texto-suave); margin: 0 0 1rem; }
+.articulo-precio { font-size: 2rem; font-weight: 700; margin: 0; }
+.articulo-precio span { font-size: 1rem; font-weight: 400; color: var(--texto-suave); }
+.rescate {
+  display: inline-block; margin: .75rem 0 1.5rem; padding: .3rem .9rem; border-radius: 999px;
+  background: color-mix(in srgb, var(--acento) 14%, var(--superficie)); color: var(--acento); font-weight: 700;
+}
+.compra label { display: block; font-weight: 700; margin-bottom: .4rem; }
+.cantidad-control { display: inline-flex; align-items: stretch; border: 2px solid var(--borde); border-radius: var(--radio); overflow: hidden; background: var(--superficie); }
+.cantidad-control input { width: 4rem; text-align: center; font: inherit; font-size: 1.2rem; border: 0; background: transparent; color: var(--texto); -moz-appearance: textfield; }
+.cantidad-control input::-webkit-inner-spin-button, .cantidad-control input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.paso-cant { width: 48px; min-height: 48px; font-size: 1.4rem; cursor: pointer; border: 0; background: transparent; color: var(--texto); }
+.paso-cant:hover { background: var(--fondo); }
+.btn-ancho { display: flex; width: 100%; justify-content: center; margin-top: 1rem; }
+.aviso-compra { margin: .75rem 0 0; font-weight: 700; color: var(--acento); }
+.aviso-compra:empty { display: none; }
+
+.acordeon { margin-top: 1.75rem; border-top: 1px solid var(--borde); }
+.acordeon details { border-bottom: 1px solid var(--borde); }
+.acordeon summary {
+  display: flex; justify-content: space-between; align-items: center; min-height: 52px; cursor: pointer;
+  font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: .9rem; list-style: none;
+}
+.acordeon summary::-webkit-details-marker { display: none; }
+.acordeon summary::after { content: "+"; font-size: 1.4rem; font-weight: 400; }
+.acordeon details[open] summary::after { content: "−"; }
+.acordeon ul { margin: 0 0 1rem; padding-left: 1.2rem; color: var(--texto-suave); }
+.acordeon li { margin-bottom: .35rem; }
+
+.otros-productos { list-style: none; padding: 0; margin: 1.25rem 0 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.otro { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; align-items: center; padding: .6rem; border-radius: 14px; background: var(--superficie); border: 1px solid var(--borde); color: var(--texto); text-decoration: none; }
+.otro img { width: 5.5rem; height: 5.5rem; object-fit: cover; border-radius: 10px; }
+.otro strong { display: block; }
+.otro:hover { border-color: var(--acento); }
+
+/* ---------- Tarjetas que revelan qué hacemos (¿Por qué se tira? y Lo que rescatamos) ---------- */
+.revela-rejilla {
+  list-style: none; padding: 0; margin: 1.25rem 0 0;
+  display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+.revela { position: relative; border-radius: 16px; overflow: hidden; background: #2a2118; box-shadow: 0 6px 18px rgba(60, 40, 20, .15); }
+.revela-boton {
+  position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; padding: 0; margin: 0;
+  border: 0; background: #2a2118; color: #fff; font: inherit; text-align: left; cursor: pointer; overflow: hidden;
+}
+.revela-boton img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.revela-boton::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(20, 14, 8, .85) 0%, rgba(20, 14, 8, .1) 55%, rgba(20, 14, 8, 0) 100%);
+}
+.revela-pie { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; display: grid; gap: .55rem; padding: 1rem 1.1rem 1.1rem; }
+.revela-titulo { font-size: 1.3rem; font-weight: 700; line-height: 1.15; }
+.revela-pie .pildora { justify-self: start; }
+.revela .cerrar { display: none; }
+.revela.abierta .abrir { display: none; }
+.revela.abierta .cerrar { display: inline; }
+.revela-boton:hover .pildora { background: #2f6b3a; color: #fff; }
+.revela-boton:focus-visible { outline: 3px solid var(--foco); outline-offset: -3px; }
+
+/* Sin JavaScript: la explicación se ve debajo de la foto */
+.revela-panel { padding: 1rem 1.1rem 1.2rem; background: var(--superficie); color: var(--texto); }
+.revela-panel p { margin: 0 0 .6rem; }
+.revela-panel a { font-weight: 700; }
+html:not(.js) .revela-pie .pildora { display: none; }
+
+/* Con JavaScript: la explicación aparece sobre la foto al presionarla */
+.js .revela-panel {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 5.4rem; z-index: 2;
+  display: flex; flex-direction: column; justify-content: center; gap: .8rem;
+  padding: 1.3rem 1.3rem; background: rgba(28, 20, 12, .93); color: #fff;
+  visibility: hidden; opacity: 0;
+}
+.js .revela-panel p { font-size: 1.1rem; line-height: 1.45; margin: 0; }
+.js .revela-panel a {
+  align-self: flex-start; padding: .55rem 1rem; border-radius: 999px;
+  background: #fffaf2; color: #2a2118; text-decoration: none;
+}
+.js .revela-panel a:hover { background: #2f6b3a; color: #fff; }
+.js .revela.abierta .revela-panel { visibility: visible; opacity: 1; }
+html[data-contraste="activo"] .js .revela-panel, html[data-contraste="activo"].js .revela-panel { background: #000; }
+
+.galeria-item .revela-boton { aspect-ratio: 4 / 4.6; }
+.galeria-item .revela-titulo { font-size: 1.2rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .js .revela-panel { transition: opacity .25s ease, visibility .25s; }
+  .revela-boton img { transition: transform .5s ease; }
+  .revela-boton:hover img { transform: scale(1.05); }
+}

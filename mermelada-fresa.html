@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mermelada con piloncillo · Cosecha Justa</title>
+  <meta name="description" content="Mermelada de fresa con piloncillo, hecha con cosecha rescatada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+  <button type="button" id="a11y-boton" class="a11y-boton" aria-expanded="false" aria-controls="a11y-panel">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="6.6" r="1.7" fill="currentColor"/>
+      <path d="M6.3 9.4l5.7 1.1 5.7-1.1M12 10.5v3.6M12 14.1l-2.6 5.2M12 14.1l2.6 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="sr-only">Opciones de accesibilidad</span>
+  </button>
+
+  <section id="a11y-panel" class="a11y-panel" aria-labelledby="a11y-titulo" hidden>
+    <div class="a11y-cabecera">
+      <h2 id="a11y-titulo" tabindex="-1">Accesibilidad</h2>
+      <button type="button" class="a11y-cerrar" aria-label="Cerrar opciones de accesibilidad">×</button>
+    </div>
+
+    <div class="a11y-grupo" role="group" aria-labelledby="a11y-tam-t">
+      <p id="a11y-tam-t" class="a11y-subtitulo">Tamaño de texto: <strong id="a11y-tamano">normal</strong></p>
+      <div class="a11y-tamanos">
+        <button type="button" class="a11y-opcion" data-accion="texto-menos" aria-label="Reducir tamaño del texto"><span aria-hidden="true">A−</span></button>
+        <button type="button" class="a11y-opcion" data-accion="texto-mas" aria-label="Aumentar tamaño del texto"><span aria-hidden="true">A+</span></button>
+      </div>
+    </div>
+
+    <div class="a11y-opciones">
+      <button type="button" class="a11y-opcion" data-accion="contraste" data-nombre="Alto contraste" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+        <span class="a11y-etiqueta">Alto contraste</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="enlaces" data-nombre="Resaltar enlaces" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="a11y-etiqueta">Resaltar enlaces</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="espaciado" data-nombre="Espaciado de texto" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="a11y-etiqueta">Espaciado de texto</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="leer" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="a11y-etiqueta">Leer en voz alta</span>
+      </button>
+    </div>
+
+    <div class="a11y-pie">
+      <button type="button" class="a11y-restablecer" data-accion="restablecer">Restablecer ajustes</button>
+      <a href="accesibilidad.html">Declaración de accesibilidad</a>
+    </div>
+    <p id="a11y-estado" class="sr-only" aria-live="polite"></p>
+  </section>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="index.html" aria-label="Cosecha Justa, ir al inicio">
+        <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 31V16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M20 19c0-5 4-8 9-8 0 5-4 8-9 8z" fill="#2f6b3a"/>
+          <path d="M20 23c0-4-3-7-8-7 0 4 3 7 8 7z" fill="#a3431f"/>
+        </svg>
+        <span>Cosecha Justa</span>
+      </a>
+      <button type="button" class="menu-boton" aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span> Menú
+      </button>
+      <nav id="menu-principal" class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="producto.html">Producto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="seccion articulo-seccion" aria-labelledby="titulo-articulo">
+      <div class="contenedor">
+        <nav class="migas" aria-label="Ruta">
+          <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="producto.html#taller">Producto</a></li>
+            <li aria-current="page">Mermelada con piloncillo</li>
+          </ol>
+        </nav>
+
+        <div class="articulo">
+          <div class="articulo-galeria">
+            <div class="articulo-foto"><img class="foto-principal" src="img/mermelada.jpg" alt="Mermelada de fresa llenando frascos" width="506" height="900"></div>
+            <ul class="miniaturas js-solo" aria-label="Más fotos">
+            <li><button type="button" class="miniatura" data-foto="img/mermelada.jpg" data-alt="Mermelada de fresa llenando frascos" aria-pressed="true" aria-label="Ver foto 1: Mermelada de fresa llenando frascos"><img src="img/mermelada.jpg" alt="" width="506" height="900" loading="lazy"></button></li>
+            <li><button type="button" class="miniatura" data-foto="img/fresa.jpg" data-alt="Tazón con fresas frescas" aria-pressed="false" aria-label="Ver foto 2: Tazón con fresas frescas"><img src="img/fresa.jpg" alt="" width="900" height="778" loading="lazy"></button></li>
+            <li><button type="button" class="miniatura" data-foto="img/cocinar.jpg" data-alt="Mermelada cocinándose en una olla" aria-pressed="false" aria-label="Ver foto 3: Mermelada cocinándose en una olla"><img src="img/cocinar.jpg" alt="" width="900" height="675" loading="lazy"></button></li>
+            </ul>
+            <p class="articulo-desc">Mermelada de fresa endulzada con piloncillo en lugar de azúcar refinada. Se hace con fresa muy madura, que es la más dulce pero ya no aguanta el viaje al mercado. Ideal para pan, yogur o postres.</p>
+          </div>
+
+          <div class="articulo-compra">
+            <h1 id="titulo-articulo">Mermelada con piloncillo</h1>
+            <p class="articulo-sub">Fresa muy madura endulzada con piloncillo</p>
+            <p class="articulo-precio">$60 <span>· frasco de 250 g</span></p>
+            <p class="rescate">Rescata 220 g de cosecha</p>
+
+            <form class="compra" data-producto="Mermelada con piloncillo" data-precio="60" action="contacto.html" method="get">
+              <label for="cantidad-mermelada-fresa">Cantidad</label>
+              <div class="cantidad-control">
+                <button type="button" class="paso-cant" data-cambio="-1" aria-label="Quitar uno">−</button>
+                <input id="cantidad-mermelada-fresa" name="cantidad" type="number" inputmode="numeric" min="1" max="99" value="1">
+                <button type="button" class="paso-cant" data-cambio="1" aria-label="Agregar uno">+</button>
+              </div>
+              <button type="submit" class="btn btn-primario btn-ancho">Agregar al carrito</button>
+              <p class="aviso-compra" role="status"></p>
+            </form>
+
+            <div class="acordeon">
+              <details open>
+                <summary>Información del producto</summary>
+                <ul>
+                <li><strong>Contenido:</strong> 250 g</li>
+                <li><strong>Ingredientes:</strong> fresa, piloncillo y limón</li>
+                <li><strong>Dura:</strong> 12 meses cerrada; refrigérala al abrir</li>
+                <li><strong>Hecho en:</strong> taller comunitario de Cosecha Justa, Michoacán</li>
+                </ul>
+              </details>
+              <details>
+                <summary>Sostenibilidad</summary>
+                <ul>
+                <li>Cada frasco rescata 220 g de fresa.</li>
+                <li>El productor recibe el 60 % de la venta.</li>
+                <li>El frasco de vidrio se puede reusar o reciclar.</li>
+                </ul>
+              </details>
+              <details>
+                <summary>Información del envío</summary>
+                <ul>
+                  <li>A todo México en 3 a 5 días hábiles.</li>
+                  <li>Envío gratis desde $400.</li>
+                  <li>Empaque sin plástico de un solo uso.</li>
+                </ul>
+              </details>
+              <details>
+                <summary>Política de devolución</summary>
+                <ul>
+                  <li>Si llega dañado, te lo reponemos sin costo.</li>
+                  <li>Avísanos en los primeros 7 días.</li>
+                </ul>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-otros">
+      <div class="contenedor">
+        <h2 id="titulo-otros">También te puede gustar</h2>
+        <ul class="otros-productos">
+          <li><a class="otro" href="mango-enchilado.html"><img src="img/mango-deshidratado.jpg" alt="" width="900" height="675" loading="lazy"><span><strong>Mango enchilado</strong> $65</span></a></li>
+          <li><a class="otro" href="salsa-molcajete.html"><img src="img/salsa.jpg" alt="" width="900" height="515" loading="lazy"><span><strong>Salsa de molcajete</strong> $55</span></a></li>
+
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>© 2026 Cosecha Justa. Maqueta académica · Diseñar para compartir, UVM.</p>
+      <ul>
+        <li><a href="accesibilidad.html">Declaración de accesibilidad</a></li>
+        <li><a href="accesibilidad.html#creditos">Créditos de fotos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
