@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accesibilidad · Cosecha Justa</title>
+  <meta name="description" content="Cómo el sitio de Cosecha Justa aplica la metodología POUR de accesibilidad.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+  <button type="button" id="a11y-boton" class="a11y-boton" aria-expanded="false" aria-controls="a11y-panel">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="6.6" r="1.7" fill="currentColor"/>
+      <path d="M6.3 9.4l5.7 1.1 5.7-1.1M12 10.5v3.6M12 14.1l-2.6 5.2M12 14.1l2.6 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="sr-only">Opciones de accesibilidad</span>
+  </button>
+
+  <section id="a11y-panel" class="a11y-panel" aria-labelledby="a11y-titulo" hidden>
+    <div class="a11y-cabecera">
+      <h2 id="a11y-titulo" tabindex="-1">Accesibilidad</h2>
+      <button type="button" class="a11y-cerrar" aria-label="Cerrar opciones de accesibilidad">×</button>
+    </div>
+
+    <div class="a11y-grupo" role="group" aria-labelledby="a11y-tam-t">
+      <p id="a11y-tam-t" class="a11y-subtitulo">Tamaño de texto: <strong id="a11y-tamano">normal</strong></p>
+      <div class="a11y-tamanos">
+        <button type="button" class="a11y-opcion" data-accion="texto-menos" aria-label="Reducir tamaño del texto"><span aria-hidden="true">A−</span></button>
+        <button type="button" class="a11y-opcion" data-accion="texto-mas" aria-label="Aumentar tamaño del texto"><span aria-hidden="true">A+</span></button>
+      </div>
+    </div>
+
+    <div class="a11y-opciones">
+      <button type="button" class="a11y-opcion" data-accion="contraste" data-nombre="Alto contraste" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+        <span class="a11y-etiqueta">Alto contraste</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="enlaces" data-nombre="Resaltar enlaces" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="a11y-etiqueta">Resaltar enlaces</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="espaciado" data-nombre="Espaciado de texto" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="a11y-etiqueta">Espaciado de texto</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="leer" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="a11y-etiqueta">Leer en voz alta</span>
+      </button>
+    </div>
+
+    <div class="a11y-pie">
+      <button type="button" class="a11y-restablecer" data-accion="restablecer">Restablecer ajustes</button>
+      <a href="accesibilidad.html">Declaración de accesibilidad</a>
+    </div>
+    <p id="a11y-estado" class="sr-only" aria-live="polite"></p>
+  </section>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="index.html" aria-label="Cosecha Justa, ir al inicio">
+        <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 31V16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M20 19c0-5 4-8 9-8 0 5-4 8-9 8z" fill="#2f6b3a"/>
+          <path d="M20 23c0-4-3-7-8-7 0 4 3 7 8 7z" fill="#a3431f"/>
+        </svg>
+        <span>Cosecha Justa</span>
+      </a>
+      <button type="button" class="menu-boton" aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span> Menú
+      </button>
+      <nav id="menu-principal" class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="producto.html">Producto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="seccion" aria-labelledby="titulo-a11y">
+      <div class="contenedor">
+        <p class="antetitulo">Declaración de accesibilidad</p>
+        <h1 id="titulo-a11y">Un sitio para todas las personas</h1>
+        <p class="lead">Lo diseñamos con la metodología POUR para que lo usen productores con un celular sencillo, personas mayores, personas con discapacidad visual o motriz y cualquier cliente.</p>
+
+        <div class="pour">
+          <article class="tarjeta">
+            <p class="letra" aria-hidden="true">P</p>
+            <h2 class="h3">Perceptible</h2>
+            <ul>
+              <li>Estructura con encabezados en orden y regiones (encabezado, menú, contenido, pie).</li>
+              <li>Colores con contraste mínimo de 4.5 a 1 y modo de alto contraste.</li>
+              <li>Botón de accesibilidad con el ícono universal, siempre visible: agrandar texto, alto contraste, resaltar enlaces, espaciado de texto y lectura en voz alta.</li>
+              <li>Tablas con encabezados y título para leer las cifras con lector de pantalla.</li>
+              <li>Todas las fotos tienen texto alternativo que describe lo que muestran.</li>
+              <li>Tipografía Atkinson Hyperlegible, pensada para baja visión.</li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <p class="letra" aria-hidden="true">O</p>
+            <h2 class="h3">Operable</h2>
+            <ul>
+              <li>Todo se usa con teclado; el foco siempre se ve. El panel de accesibilidad se cierra con la tecla Esc.</li>
+              <li>Enlace «Saltar al contenido principal» al inicio.</li>
+              <li>El logotipo regresa al inicio y el botón «Atrás» del navegador funciona en todas las páginas.</li>
+              <li>Áreas táctiles de al menos 44 × 44 píxeles.</li>
+              <li>Sin animaciones si la persona las desactivó en su equipo.</li>
+              <li>Respeta el zoom del navegador y el alto contraste del sistema operativo.</li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <p class="letra" aria-hidden="true">U</p>
+            <h2 class="h3">Comprensible</h2>
+            <ul>
+              <li>Solo 3 secciones: Inicio, Producto y Contacto.</li>
+              <li>Frases cortas, sin tecnicismos, y procesos explicados en pasos numerados.</li>
+              <li>Formularios con etiquetas, ejemplos y mensajes de error que dicen cómo corregir.</li>
+              <li>Idioma de la página declarado como español de México.</li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <p class="letra" aria-hidden="true">R</p>
+            <h2 class="h3">Robusto</h2>
+            <ul>
+              <li>HTML, CSS y JavaScript estándar, sin librerías ni plataformas cerradas.</li>
+              <li>Funciona sin JavaScript: el menú y el contenido siguen disponibles.</li>
+              <li>Se adapta a celular, tableta y computadora, y respeta el modo oscuro.</li>
+              <li>Atributos ARIA para lectores de pantalla (NVDA, VoiceOver, TalkBack).</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="creditos" aria-labelledby="titulo-creditos">
+      <div class="contenedor">
+        <h2 id="titulo-creditos">Créditos de las fotografías</h2>
+        <p>Todas las fotos vienen de Wikimedia Commons y tienen licencia libre. Se redujeron de tamaño para que carguen rápido.</p>
+        <ul class="fuentes">
+          <li><a href="https://commons.wikimedia.org/wiki/File:Mangos_-_single_and_halved.jpg">Mangos - single and halved.jpg</a>, de Ivar Leidus. Licencia CC BY-SA 4.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Tomatoes_For_Sale_(Unsplash).jpg">Tomatoes For Sale (Unsplash).jpg</a>, de Thomas Martinsen faceline. Licencia CC0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Peppers_for_sale.JPG">Peppers for sale.JPG</a>, de U.S. Air Force photo by Tech. Sgt. Michael B. Keller. Licencia Public domain. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Fresh_strawberries_for_jam.jpg">Fresh strawberries for jam.jpg</a>, de Nutrition, Food Safety &amp; Health. Licencia CC0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Guava_-_Psidium_guajava_fruit_of_Cuba.jpg">Guava - Psidium guajava fruit of Cuba.jpg</a>, de Sarang. Licencia Public domain. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Bunch_of_bananas_on_sale.jpg">Bunch of bananas on sale.jpg</a>, de Wilfredor. Licencia CC0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Avocado_Hass_-_single_and_halved.jpg">Avocado Hass - single and halved.jpg</a>, de Ivar Leidus. Licencia CC BY-SA 4.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Lime-Whole-Split.jpg">Lime-Whole-Split.jpg</a>, de Evan-Amos. Licencia CC0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Mangues_sechees.jpg">Mangues sechees.jpg</a>, de Asabengurtza. Licencia CC BY-SA 3.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Salsa_verde_molcajete.jpg">Salsa verde molcajete.jpg</a>, de Elizabethcasasola. Licencia CC BY-SA 4.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Placing_lids_on_strawberry_jam.jpg">Placing lids on strawberry jam.jpg</a>, de Nutrition, Food Safety &amp; Health. Licencia CC0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Mangos_criollos_en_mercado.JPG">Mangos criollos en mercado.JPG</a>, de Slevinr. Licencia CC BY 3.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Sparragus_pickers.jpg">Sparragus pickers.jpg</a>, de Tomascastelazo. Licencia CC BY-SA 4.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Papayas_en_mercado,_M%C3%A9xico.jpg">Papayas en mercado, México.jpg</a>, de ProtoplasmaKid. Licencia CC0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Puesto_de_frutas_y_verduras_en_el_mercado_de_Medell%C3%ADn_en_la_Colonia_Roma.jpg">Puesto de frutas y verduras en el mercado de Medellín en la Colonia Roma.jpg</a>, de Estef93. Licencia CC BY-SA 4.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Grape_harvest_in_Chateaux_Luna_vineyard_1.jpg">Grape harvest in Chateaux Luna vineyard 1.jpg</a>, de W.carter. Licencia CC0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Jagoda.JPG">Jagoda.JPG</a>, de Silverije. Licencia CC BY-SA 3.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Overripe_lacatan_bananas.jpg">Overripe lacatan bananas.jpg</a>, de Obsidi♠nSoul. Licencia Public domain. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Vegetable_box_4.jpg">Vegetable box 4.jpg</a>, de Andy Roberts. Licencia CC BY 2.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Ghanaian_Cocoa_Farmer_on_Phone.jpg">Ghanaian Cocoa Farmer on Phone.jpg</a>, de IanCamp. Licencia CC BY-SA 4.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Homemade_Jams_(Unsplash).jpg">Homemade Jams (Unsplash).jpg</a>, de Olia Gozha olia. Licencia CC0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Compost_bin_with_compost.jpg">Compost bin with compost.jpg</a>, de Niwrat. Licencia CC BY-SA 4.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:NAVSTA_Rota_Volunteers_Get_Food_and_Donations_to_Evacuees_from_Afghanistan_(6820934).jpg">NAVSTA Rota Volunteers Get Food and Donations to Evacuees from Afghanistan (6820934).jpg</a>, de U.S. Navy photo by [null Courtesy]. Licencia Public domain. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:OFICINA_CULIN%C3%81RIA_ONG_BANCO_DE_ALIMENTOS.jpg">OFICINA CULINÁRIA ONG BANCO DE ALIMENTOS.jpg</a>, de Lele2198. Licencia CC BY-SA 4.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Making_Bilberry_Jam.jpg">Making Bilberry Jam.jpg</a>, de Quadell. Licencia CC BY 3.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Fruit_preserve_jars.jpg">Fruit preserve jars.jpg</a>, de Colorado State University Extension. Licencia CC0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Fresno_Cauliflower_Truck_by_Patty_Mooney.jpg">Fresno Cauliflower Truck by Patty Mooney.jpg</a>, de Pattymooney (Patty Mooney, San Diego, California). Licencia CC BY-SA 3.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:A_heavily_loaded_pickup_truck_brings_in_produce_to_the_Siem_Reap_central_market.jpg">A heavily loaded pickup truck brings in produce to the Siem Reap central market.jpg</a>, de shankar s.. Licencia CC BY 2.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:A_man_weighing_tomatoes_using_his_Tharasu_in_Madurai.jpg">A man weighing tomatoes using his Tharasu in Madurai.jpg</a>, de எஸ்ஸார். Licencia CC BY-SA 3.0. Wikimedia Commons.</li>
+          <li><a href="https://commons.wikimedia.org/wiki/File:Artesana_en_Cap%C3%A1cuaro_Michoac%C3%A1n_02.jpg">Artesana en Capácuaro Michoacán 02.jpg</a>, de A LO MEXA. Licencia CC BY-SA 4.0. Wikimedia Commons.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-ayuda">
+      <div class="contenedor">
+        <h2 id="titulo-ayuda">¿Encontraste una barrera?</h2>
+        <p>Si algo no te funciona, avísanos por <a href="contacto.html">cualquiera de nuestros medios de contacto</a> y lo corregimos.</p>
+        <p>Referencia: Smyk, A. (2017, 24 de noviembre). <cite lang="en">Design With Accessibility in Mind: The POUR Methodology</cite>. Adobe Blog. <a href="https://blog.adobe.com/en/publish/2017/11/24/design-with-accessibility-in-mind-the-pour-methodology" lang="en">blog.adobe.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>© 2026 Cosecha Justa. Maqueta académica · Diseñar para compartir, UVM.</p>
+      <ul>
+        <li><a href="accesibilidad.html">Declaración de accesibilidad</a></li>
+        <li><a href="accesibilidad.html#creditos">Créditos de fotos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

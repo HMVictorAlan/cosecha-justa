@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cosecha Justa</title>
+  <meta name="description" content="En México se pierden 20.4 millones de toneladas de alimento al año. Conoce por qué y cómo darle otra vida a tu cosecha.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+  <button type="button" id="a11y-boton" class="a11y-boton" aria-expanded="false" aria-controls="a11y-panel">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="6.6" r="1.7" fill="currentColor"/>
+      <path d="M6.3 9.4l5.7 1.1 5.7-1.1M12 10.5v3.6M12 14.1l-2.6 5.2M12 14.1l2.6 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="sr-only">Opciones de accesibilidad</span>
+  </button>
+
+  <section id="a11y-panel" class="a11y-panel" aria-labelledby="a11y-titulo" hidden>
+    <div class="a11y-cabecera">
+      <h2 id="a11y-titulo" tabindex="-1">Accesibilidad</h2>
+      <button type="button" class="a11y-cerrar" aria-label="Cerrar opciones de accesibilidad">×</button>
+    </div>
+
+    <div class="a11y-grupo" role="group" aria-labelledby="a11y-tam-t">
+      <p id="a11y-tam-t" class="a11y-subtitulo">Tamaño de texto: <strong id="a11y-tamano">normal</strong></p>
+      <div class="a11y-tamanos">
+        <button type="button" class="a11y-opcion" data-accion="texto-menos" aria-label="Reducir tamaño del texto"><span aria-hidden="true">A−</span></button>
+        <button type="button" class="a11y-opcion" data-accion="texto-mas" aria-label="Aumentar tamaño del texto"><span aria-hidden="true">A+</span></button>
+      </div>
+    </div>
+
+    <div class="a11y-opciones">
+      <button type="button" class="a11y-opcion" data-accion="contraste" data-nombre="Alto contraste" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+        <span class="a11y-etiqueta">Alto contraste</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="enlaces" data-nombre="Resaltar enlaces" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="a11y-etiqueta">Resaltar enlaces</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="espaciado" data-nombre="Espaciado de texto" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="a11y-etiqueta">Espaciado de texto</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="leer" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="a11y-etiqueta">Leer en voz alta</span>
+      </button>
+    </div>
+
+    <div class="a11y-pie">
+      <button type="button" class="a11y-restablecer" data-accion="restablecer">Restablecer ajustes</button>
+      <a href="accesibilidad.html">Declaración de accesibilidad</a>
+    </div>
+    <p id="a11y-estado" class="sr-only" aria-live="polite"></p>
+  </section>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="index.html" aria-label="Cosecha Justa, ir al inicio">
+        <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 31V16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M20 19c0-5 4-8 9-8 0 5-4 8-9 8z" fill="#2f6b3a"/>
+          <path d="M20 23c0-4-3-7-8-7 0 4 3 7 8 7z" fill="#a3431f"/>
+        </svg>
+        <span>Cosecha Justa</span>
+      </a>
+      <button type="button" class="menu-boton" aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span> Menú
+      </button>
+      <nav id="menu-principal" class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="producto.html">Producto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="hero-foto" aria-labelledby="titulo-inicio">
+      <img src="img/hero-mangos.jpg" alt="Montón de mangos criollos en un mercado" width="1400" height="1050">
+      <div class="contenedor hero-foto-texto">
+        <h1 id="titulo-inicio">1 de cada 3 alimentos se tira</h1>
+        <p>Y casi todo está sano.</p>
+        <div class="acciones">
+          <a class="btn btn-primario" href="producto.html#empezar">Vende tu cosecha</a>
+          <a class="btn btn-claro" href="#alternativas">Ver opciones</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-cifras">
+      <div class="contenedor">
+        <h2 id="titulo-cifras">México, cada año</h2>
+        <div class="cifras">
+          <p class="cifra"><strong>20.4 M</strong><span>toneladas tiradas</span></p>
+          <p class="cifra"><strong>34 %</strong><span>de lo que se produce</span></p>
+          <p class="cifra"><strong>$491 mil M</strong><span>pesos perdidos</span></p>
+          <p class="cifra"><strong>18.2 %</strong><span>sin comida suficiente</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-motivos">
+      <div class="contenedor">
+        <h2 id="titulo-motivos">¿Por qué se tira?</h2>
+        <div class="foto-rejilla">
+          <article class="foto-tarjeta">
+            <img src="img/fea.jpg" alt="Fresa deforme" width="675" height="900" loading="lazy">
+            <div class="foto-texto">
+              <h3>No se ve bonita</h3>
+            </div>
+          </article>
+          <article class="foto-tarjeta">
+            <img src="img/madura.jpg" alt="Plátanos muy maduros con manchas negras" width="900" height="784" loading="lazy">
+            <div class="foto-texto">
+              <h3>Maduró rápido</h3>
+            </div>
+          </article>
+          <article class="foto-tarjeta">
+            <img src="img/camion-carga.jpg" alt="Camioneta sobrecargada con costales de cosecha" width="900" height="675" loading="lazy">
+            <div class="foto-texto">
+              <h3>Sin transporte</h3>
+            </div>
+          </article>
+          <article class="foto-tarjeta">
+            <img src="img/precio-bajo.jpg" alt="Papayas en un mercado con un letrero de 10 pesos el kilo" width="900" height="900" loading="lazy">
+            <div class="foto-texto">
+              <h3>Precio injusto</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-galeria">
+      <div class="contenedor">
+        <div class="galeria-cabecera">
+          <h2 id="titulo-galeria">Lo que rescatamos</h2>
+          <div class="galeria-controles js-solo">
+            <button type="button" class="galeria-btn" data-galeria="-1" aria-label="Ver cosechas anteriores">←</button>
+            <button type="button" class="galeria-btn" data-galeria="1" aria-label="Ver más cosechas">→</button>
+          </div>
+        </div>
+        <div class="galeria" tabindex="0" role="region" aria-label="Galería de cosechas que rescatamos">
+          <ul class="galeria-pista">
+            <li class="galeria-item">
+              <figure>
+                <img src="img/mango.jpg" alt="Dos mangos maduros, uno entero y otro partido" width="900" height="600" loading="lazy">
+                <figcaption>Mango</figcaption>
+              </figure>
+            </li>
+            <li class="galeria-item">
+              <figure>
+                <img src="img/jitomate.jpg" alt="Racimos de jitomates rojos" width="900" height="600" loading="lazy">
+                <figcaption>Jitomate</figcaption>
+              </figure>
+            </li>
+            <li class="galeria-item">
+              <figure>
+                <img src="img/chile.jpg" alt="Montón de chiles verdes" width="900" height="599" loading="lazy">
+                <figcaption>Chile</figcaption>
+              </figure>
+            </li>
+            <li class="galeria-item">
+              <figure>
+                <img src="img/fresa.jpg" alt="Tazón con fresas frescas" width="900" height="778" loading="lazy">
+                <figcaption>Fresa</figcaption>
+              </figure>
+            </li>
+            <li class="galeria-item">
+              <figure>
+                <img src="img/guayaba.jpg" alt="Guayabas maduras, dos partidas a la mitad" width="900" height="679" loading="lazy">
+                <figcaption>Guayaba</figcaption>
+              </figure>
+            </li>
+            <li class="galeria-item">
+              <figure>
+                <img src="img/platano.jpg" alt="Racimos de plátanos con manchas" width="900" height="598" loading="lazy">
+                <figcaption>Plátano</figcaption>
+              </figure>
+            </li>
+            <li class="galeria-item">
+              <figure>
+                <img src="img/aguacate.jpg" alt="Aguacate entero y otro partido" width="900" height="600" loading="lazy">
+                <figcaption>Aguacate</figcaption>
+              </figure>
+            </li>
+            <li class="galeria-item">
+              <figure>
+                <img src="img/limon.jpg" alt="Limón entero y otro partido" width="900" height="432" loading="lazy">
+                <figcaption>Limón</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="alternativas" aria-labelledby="titulo-alternativas">
+      <div class="contenedor">
+        <h2 id="titulo-alternativas">Dale otra vida a tu cosecha</h2>
+        <ul class="botones-foto">
+          <li>
+            <a class="foto-boton" href="producto.html?camino=taller#empezar">
+              <img src="img/cocinar.jpg" alt="" width="900" height="675" loading="lazy">
+              <span class="foto-boton-texto">
+                <span class="foto-boton-titulo">Transfórmala</span>
+                <span class="pildora">Taller gratis <span aria-hidden="true">→</span></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="foto-boton" href="producto.html?camino=lote#empezar">
+              <img src="img/cajas.jpg" alt="" width="900" height="687" loading="lazy">
+              <span class="foto-boton-texto">
+                <span class="foto-boton-titulo">Véndela por lote</span>
+                <span class="pildora">Empezar <span aria-hidden="true">→</span></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="foto-boton" href="producto.html#venta">
+              <img src="img/mercado.jpg" alt="" width="900" height="805" loading="lazy">
+              <span class="foto-boton-texto">
+                <span class="foto-boton-titulo">Véndela cerca</span>
+                <span class="pildora">Ver dónde <span aria-hidden="true">→</span></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="foto-boton" href="https://bamx.org.mx/" rel="noopener">
+              <img src="img/donar.jpg" alt="" width="900" height="600" loading="lazy">
+              <span class="foto-boton-texto">
+                <span class="foto-boton-titulo">Dónala</span>
+                <span class="pildora">Ir al banco<span class="sr-only"> (sitio externo)</span> <span aria-hidden="true">↗</span></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="foto-boton" href="contacto.html?motivo=lote">
+              <img src="img/composta.jpg" alt="" width="676" height="900" loading="lazy">
+              <span class="foto-boton-texto">
+                <span class="foto-boton-titulo">Composta</span>
+                <span class="pildora">La compramos <span aria-hidden="true">→</span></span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-fuentes">
+      <div class="contenedor">
+        <h2 id="titulo-fuentes" class="h3">Fuentes</h2>
+        <ul class="fuentes">
+          <li>Banco Mundial y SEMARNAT. (2017). <cite>Pérdidas y desperdicios de alimentos en México: una perspectiva económica, ambiental y social</cite>.</li>
+          <li>Bancos de Alimentos de México. (s. f.). <cite>Desperdicio de alimentos en México</cite>. https://bamx.org.mx/</li>
+          <li>CONEVAL. (2023). <cite>Medición multidimensional de la pobreza en México, 2022</cite>. https://www.coneval.org.mx/</li>
+          <li>FAO. (2011). <cite lang="en">Global food losses and food waste: Extent, causes and prevention</cite>.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>© 2026 Cosecha Justa. Maqueta académica · Diseñar para compartir, UVM.</p>
+      <ul>
+        <li><a href="accesibilidad.html">Declaración de accesibilidad</a></li>
+        <li><a href="accesibilidad.html#creditos">Créditos de fotos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

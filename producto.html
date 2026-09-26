@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Producto · Cosecha Justa</title>
+  <meta name="description" content="Vende tu cosecha por lote a Cosecha Justa o aprende a transformarla en productos con mejor precio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/main.js"></script>
+  <script src="js/asistente.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+  <button type="button" id="a11y-boton" class="a11y-boton" aria-expanded="false" aria-controls="a11y-panel">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="6.6" r="1.7" fill="currentColor"/>
+      <path d="M6.3 9.4l5.7 1.1 5.7-1.1M12 10.5v3.6M12 14.1l-2.6 5.2M12 14.1l2.6 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="sr-only">Opciones de accesibilidad</span>
+  </button>
+
+  <section id="a11y-panel" class="a11y-panel" aria-labelledby="a11y-titulo" hidden>
+    <div class="a11y-cabecera">
+      <h2 id="a11y-titulo" tabindex="-1">Accesibilidad</h2>
+      <button type="button" class="a11y-cerrar" aria-label="Cerrar opciones de accesibilidad">×</button>
+    </div>
+
+    <div class="a11y-grupo" role="group" aria-labelledby="a11y-tam-t">
+      <p id="a11y-tam-t" class="a11y-subtitulo">Tamaño de texto: <strong id="a11y-tamano">normal</strong></p>
+      <div class="a11y-tamanos">
+        <button type="button" class="a11y-opcion" data-accion="texto-menos" aria-label="Reducir tamaño del texto"><span aria-hidden="true">A−</span></button>
+        <button type="button" class="a11y-opcion" data-accion="texto-mas" aria-label="Aumentar tamaño del texto"><span aria-hidden="true">A+</span></button>
+      </div>
+    </div>
+
+    <div class="a11y-opciones">
+      <button type="button" class="a11y-opcion" data-accion="contraste" data-nombre="Alto contraste" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+        <span class="a11y-etiqueta">Alto contraste</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="enlaces" data-nombre="Resaltar enlaces" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="a11y-etiqueta">Resaltar enlaces</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="espaciado" data-nombre="Espaciado de texto" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="a11y-etiqueta">Espaciado de texto</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="leer" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="a11y-etiqueta">Leer en voz alta</span>
+      </button>
+    </div>
+
+    <div class="a11y-pie">
+      <button type="button" class="a11y-restablecer" data-accion="restablecer">Restablecer ajustes</button>
+      <a href="accesibilidad.html">Declaración de accesibilidad</a>
+    </div>
+    <p id="a11y-estado" class="sr-only" aria-live="polite"></p>
+  </section>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="index.html" aria-label="Cosecha Justa, ir al inicio">
+        <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 31V16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M20 19c0-5 4-8 9-8 0 5-4 8-9 8z" fill="#2f6b3a"/>
+          <path d="M20 23c0-4-3-7-8-7 0 4 3 7 8 7z" fill="#a3431f"/>
+        </svg>
+        <span>Cosecha Justa</span>
+      </a>
+      <button type="button" class="menu-boton" aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span> Menú
+      </button>
+      <nav id="menu-principal" class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="producto.html" aria-current="page">Producto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="hero-foto" aria-labelledby="titulo-producto">
+      <img src="img/campo.jpg" alt="Jornaleros cosechando en el campo" width="1400" height="523">
+      <div class="contenedor hero-foto-texto">
+        <h1 id="titulo-producto">Rescata tu cosecha</h1>
+        <p>Véndela o transfórmala.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="empezar" aria-labelledby="titulo-empezar">
+      <div class="contenedor">
+        <h2 id="titulo-empezar" class="sr-only">Empieza aquí</h2>
+        <p id="saludo" class="saludo js-solo" hidden></p>
+
+        <form id="asistente" class="asistente" action="contacto.html" method="get" novalidate>
+          <ol class="progreso js-solo" aria-label="Avance">
+            <li data-indicador="1" aria-current="step">Qué</li>
+            <li data-indicador="2">Cosecha</li>
+            <li data-indicador="3">Cuánto</li>
+            <li data-indicador="4">Perfil</li>
+          </ol>
+          <p id="progreso-texto" class="sr-only" aria-live="polite"></p>
+
+          <fieldset class="paso" data-paso="1">
+            <legend><h2 tabindex="-1">¿Qué quieres hacer?</h2></legend>
+            <div class="opciones dos">
+              <label class="opcion con-foto">
+                <input type="radio" name="camino" value="lote">
+                <img src="img/cajas.jpg" alt="" width="900" height="687" loading="lazy">
+                <span class="opcion-cuerpo">
+                  <span class="opcion-titulo">Vender por lote</span>
+                  <span class="opcion-frase">Pago el mismo día</span>
+                </span>
+              </label>
+              <label class="opcion con-foto">
+                <input type="radio" name="camino" value="taller">
+                <img src="img/taller.jpg" alt="" width="1200" height="721" loading="lazy">
+                <span class="opcion-cuerpo">
+                  <span class="opcion-titulo">Aprender a hacer un producto</span>
+                  <span class="opcion-frase">Taller gratis</span>
+                </span>
+              </label>
+            </div>
+            <p id="error-camino" class="error" aria-live="polite"></p>
+            <div class="navegacion-pasos js-solo">
+              <button type="button" class="btn btn-primario" data-ir="2">Siguiente</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="paso" data-paso="2">
+            <legend><h2 tabindex="-1">¿Qué tienes?</h2></legend>
+            <p id="ayuda-cosecha" class="ayuda"></p>
+            <div class="chips cosechas">
+              <label class="chip foto" data-caminos="lote taller"><input type="radio" name="cosecha" value="mango"><img src="img/mango.jpg" alt="" width="900" height="600" loading="lazy"><span>Mango</span></label>
+              <label class="chip foto" data-caminos="lote taller"><input type="radio" name="cosecha" value="jitomate"><img src="img/jitomate.jpg" alt="" width="900" height="600" loading="lazy"><span>Jitomate</span></label>
+              <label class="chip foto" data-caminos="lote taller"><input type="radio" name="cosecha" value="chile"><img src="img/chile.jpg" alt="" width="900" height="599" loading="lazy"><span>Chile</span></label>
+              <label class="chip foto" data-caminos="lote taller"><input type="radio" name="cosecha" value="fresa"><img src="img/fresa.jpg" alt="" width="900" height="778" loading="lazy"><span>Fresa</span></label>
+              <label class="chip foto" data-caminos="lote taller"><input type="radio" name="cosecha" value="guayaba"><img src="img/guayaba.jpg" alt="" width="900" height="679" loading="lazy"><span>Guayaba</span></label>
+              <label class="chip foto" data-caminos="lote"><input type="radio" name="cosecha" value="platano"><img src="img/platano.jpg" alt="" width="900" height="598" loading="lazy"><span>Plátano</span></label>
+              <label class="chip foto" data-caminos="lote"><input type="radio" name="cosecha" value="aguacate"><img src="img/aguacate.jpg" alt="" width="900" height="600" loading="lazy"><span>Aguacate</span></label>
+              <label class="chip foto" data-caminos="lote"><input type="radio" name="cosecha" value="limon"><img src="img/limon.jpg" alt="" width="900" height="432" loading="lazy"><span>Limón</span></label>
+            </div>
+            <div id="aprenderas" class="aprenderas" aria-live="polite"></div>
+            <p id="error-cosecha" class="error" aria-live="polite"></p>
+            <div class="navegacion-pasos js-solo">
+              <button type="button" class="btn btn-secundario" data-ir="1">Atrás</button>
+              <button type="button" class="btn btn-primario" data-ir="3">Siguiente</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="paso" data-paso="3">
+            <legend><h2 tabindex="-1">¿Cuánto?</h2></legend>
+            <div class="formulario">
+              <div class="campo cantidad">
+                <label for="cantidad">Cantidad</label>
+                <span id="ayuda-cantidad" class="ayuda">1 caja ≈ 20 kg</span>
+                <div class="cantidad-fila">
+                  <input id="cantidad" name="cantidad" type="number" inputmode="numeric" min="1" step="1" aria-describedby="ayuda-cantidad error-cantidad">
+                  <fieldset class="unidades">
+                    <legend class="sr-only">Unidad</legend>
+                    <label class="chip"><input type="radio" name="unidad" value="kg" checked> Kilos</label>
+                    <label class="chip"><input type="radio" name="unidad" value="cajas"> Cajas</label>
+                  </fieldset>
+                </div>
+                <p id="error-cantidad" class="error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div id="estimado" class="resumen js-solo" aria-live="polite" hidden></div>
+            <p class="nota">Estimado de referencia.</p>
+            <div class="navegacion-pasos js-solo">
+              <button type="button" class="btn btn-secundario" data-ir="2">Atrás</button>
+              <button type="button" class="btn btn-primario" data-ir="4">Avanzar</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="paso" data-paso="4">
+            <legend><h2 tabindex="-1">Tu perfil</h2></legend>
+            <div class="formulario">
+              <div class="campo">
+                <label for="p-nombre">Nombre</label>
+                <input id="p-nombre" name="nombre" type="text" autocomplete="name" aria-describedby="error-p-nombre">
+                <p id="error-p-nombre" class="error" aria-live="polite"></p>
+              </div>
+              <div class="campo">
+                <label for="p-telefono">Teléfono</label>
+                <span id="ayuda-p-telefono" class="ayuda">10 números</span>
+                <input id="p-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" aria-describedby="ayuda-p-telefono error-p-telefono">
+                <p id="error-p-telefono" class="error" aria-live="polite"></p>
+              </div>
+              <div class="campo">
+                <label for="p-comunidad">Comunidad y estado</label>
+                <span id="ayuda-p-comunidad" class="ayuda">Ej.: Tuxpan, Michoacán</span>
+                <input id="p-comunidad" name="comunidad" type="text" autocomplete="address-level2" aria-describedby="ayuda-p-comunidad error-p-comunidad">
+                <p id="error-p-comunidad" class="error" aria-live="polite"></p>
+              </div>
+              <fieldset class="campo sub">
+                <legend>Te contactamos por</legend>
+                <div class="chips">
+                  <label class="chip"><input type="radio" name="contacto" value="WhatsApp" checked> WhatsApp</label>
+                  <label class="chip"><input type="radio" name="contacto" value="Llamada"> Llamada</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="navegacion-pasos">
+              <button type="button" class="btn btn-secundario js-solo" data-ir="3">Atrás</button>
+              <button type="submit" class="btn btn-primario">Crear mi perfil</button>
+            </div>
+          </fieldset>
+
+          <div id="confirmacion" class="aviso" role="status" tabindex="-1"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="seccion" id="vender" aria-labelledby="titulo-vender">
+      <div class="contenedor">
+        <h2 id="titulo-vender">Venta por lote</h2>
+        <ol class="foto-pasos">
+          <li class="foto-paso">
+            <img src="img/telefono.jpg" alt="Productor hablando por teléfono en su parcela" width="600" height="900" loading="lazy">
+            <p><span class="num" aria-hidden="true">1</span>Avísanos</p>
+          </li>
+          <li class="foto-paso">
+            <img src="img/camioneta.jpg" alt="Camioneta con cajas de coliflor en el campo" width="900" height="675" loading="lazy">
+            <p><span class="num" aria-hidden="true">2</span>Recogemos en tu parcela</p>
+          </li>
+          <li class="foto-paso">
+            <img src="img/bascula.jpg" alt="Jitomates pesados en una báscula" width="774" height="900" loading="lazy">
+            <p><span class="num" aria-hidden="true">3</span>Pesamos y te pagamos</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="seccion" id="taller" aria-labelledby="titulo-taller">
+      <div class="contenedor">
+        <div class="foto-banda">
+          <img src="img/taller.jpg" alt="Grupo de cocineras sonriendo con verduras frescas" width="1200" height="721" loading="lazy">
+          <div class="foto-banda-texto">
+            <h2 id="titulo-taller">Taller gratis</h2>
+            <ul class="insignias">
+              <li>3 sábados</li>
+              <li>En tu comunidad</li>
+              <li>Te llevas tu primer lote</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="subtitulo-seccion">Aprendes 3 productos</h3>
+        <div class="rejilla productos-taller-rejilla">
+          <article class="tarjeta producto-taller">
+            <figure class="antes-despues" data-estado="antes">
+              <div class="marco">
+                <img class="antes" src="img/mango.jpg" alt="Dos mangos maduros, uno entero y otro partido" width="900" height="600" loading="lazy">
+                <img class="despues" src="img/mango-deshidratado.jpg" alt="Rebanadas de mango deshidratado en una canasta" width="900" height="675" loading="lazy">
+                <span class="marca" aria-hidden="true">Cosecha</span>
+              </div>
+              <figcaption class="js-solo"><button type="button" class="btn-cambio" aria-pressed="false">Ver producto</button></figcaption>
+            </figure>
+            <h3>Mango enchilado</h3>
+            <p class="linea">10 kg → <strong>10 bolsas</strong></p>
+            <p class="linea">$65 c/u · <span class="destacado">margen 70 %</span></p>
+          </article>
+          <article class="tarjeta producto-taller">
+            <figure class="antes-despues" data-estado="antes">
+              <div class="marco">
+                <img class="antes" src="img/jitomate.jpg" alt="Racimos de jitomates rojos" width="900" height="600" loading="lazy">
+                <img class="despues" src="img/salsa.jpg" alt="Salsa verde en molcajete" width="900" height="515" loading="lazy">
+                <span class="marca" aria-hidden="true">Cosecha</span>
+              </div>
+              <figcaption class="js-solo"><button type="button" class="btn-cambio" aria-pressed="false">Ver producto</button></figcaption>
+            </figure>
+            <h3>Salsa en frasco</h3>
+            <p class="linea">10 kg → <strong>30 frascos</strong></p>
+            <p class="linea">$55 c/u · <span class="destacado">margen 65 %</span></p>
+          </article>
+          <article class="tarjeta producto-taller">
+            <figure class="antes-despues" data-estado="antes">
+              <div class="marco">
+                <img class="antes" src="img/fresa.jpg" alt="Tazón con fresas frescas" width="900" height="778" loading="lazy">
+                <img class="despues" src="img/mermelada.jpg" alt="Mermelada de fresa llenando frascos" width="506" height="900" loading="lazy">
+                <span class="marca" aria-hidden="true">Cosecha</span>
+              </div>
+              <figcaption class="js-solo"><button type="button" class="btn-cambio" aria-pressed="false">Ver producto</button></figcaption>
+            </figure>
+            <h3>Mermelada</h3>
+            <p class="linea">10 kg → <strong>45 frascos</strong></p>
+            <p class="linea">$60 c/u · <span class="destacado">margen 60 %</span></p>
+          </article>
+        </div>
+        <p class="nota">Cifras estimadas.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="venta" aria-labelledby="titulo-venta">
+      <div class="contenedor">
+        <h2 id="titulo-venta">Nosotros lo vendemos</h2>
+        <p class="grande">Tú recibes el <strong>60 %</strong> de cada venta.</p>
+        <div class="foto-rejilla tres">
+          <article class="foto-tarjeta">
+            <img src="img/caja-rescate.jpg" alt="Caja de cartón con verduras y naranjas" width="900" height="675" loading="lazy">
+            <div class="foto-texto">
+              <h3>Caja Rescate</h3>
+              <p>Suscripción a domicilio</p>
+            </div>
+          </article>
+          <article class="foto-tarjeta">
+            <img src="img/tienda.jpg" alt="Frascos de conserva en un anaquel" width="900" height="600" loading="lazy">
+            <div class="foto-texto">
+              <h3>Tiendas aliadas</h3>
+              <p>Cafeterías y tiendas</p>
+            </div>
+          </article>
+          <article class="foto-tarjeta">
+            <img src="img/mercado.jpg" alt="Puesto de frutas y verduras en un mercado" width="900" height="805" loading="lazy">
+            <div class="foto-texto">
+              <h3>Tianguis</h3>
+              <p>Ferias y mercados</p>
+            </div>
+          </article>
+        </div>
+        <div class="acciones">
+          <a class="btn btn-primario" href="producto.html?camino=taller#empezar">Quiero el taller</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>© 2026 Cosecha Justa. Maqueta académica · Diseñar para compartir, UVM.</p>
+      <ul>
+        <li><a href="accesibilidad.html">Declaración de accesibilidad</a></li>
+        <li><a href="accesibilidad.html#creditos">Créditos de fotos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

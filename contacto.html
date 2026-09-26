@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto · Cosecha Justa</title>
+  <meta name="description" content="Contacta a Cosecha Justa por WhatsApp, llamada, correo o formulario.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+  <button type="button" id="a11y-boton" class="a11y-boton" aria-expanded="false" aria-controls="a11y-panel">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="6.6" r="1.7" fill="currentColor"/>
+      <path d="M6.3 9.4l5.7 1.1 5.7-1.1M12 10.5v3.6M12 14.1l-2.6 5.2M12 14.1l2.6 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="sr-only">Opciones de accesibilidad</span>
+  </button>
+
+  <section id="a11y-panel" class="a11y-panel" aria-labelledby="a11y-titulo" hidden>
+    <div class="a11y-cabecera">
+      <h2 id="a11y-titulo" tabindex="-1">Accesibilidad</h2>
+      <button type="button" class="a11y-cerrar" aria-label="Cerrar opciones de accesibilidad">×</button>
+    </div>
+
+    <div class="a11y-grupo" role="group" aria-labelledby="a11y-tam-t">
+      <p id="a11y-tam-t" class="a11y-subtitulo">Tamaño de texto: <strong id="a11y-tamano">normal</strong></p>
+      <div class="a11y-tamanos">
+        <button type="button" class="a11y-opcion" data-accion="texto-menos" aria-label="Reducir tamaño del texto"><span aria-hidden="true">A−</span></button>
+        <button type="button" class="a11y-opcion" data-accion="texto-mas" aria-label="Aumentar tamaño del texto"><span aria-hidden="true">A+</span></button>
+      </div>
+    </div>
+
+    <div class="a11y-opciones">
+      <button type="button" class="a11y-opcion" data-accion="contraste" data-nombre="Alto contraste" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+        <span class="a11y-etiqueta">Alto contraste</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="enlaces" data-nombre="Resaltar enlaces" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="a11y-etiqueta">Resaltar enlaces</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="espaciado" data-nombre="Espaciado de texto" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span class="a11y-etiqueta">Espaciado de texto</span>
+      </button>
+      <button type="button" class="a11y-opcion" data-accion="leer" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9v6h4l5 4V5L8 9zM16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="a11y-etiqueta">Leer en voz alta</span>
+      </button>
+    </div>
+
+    <div class="a11y-pie">
+      <button type="button" class="a11y-restablecer" data-accion="restablecer">Restablecer ajustes</button>
+      <a href="accesibilidad.html">Declaración de accesibilidad</a>
+    </div>
+    <p id="a11y-estado" class="sr-only" aria-live="polite"></p>
+  </section>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="index.html" aria-label="Cosecha Justa, ir al inicio">
+        <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 31V16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M20 19c0-5 4-8 9-8 0 5-4 8-9 8z" fill="#2f6b3a"/>
+          <path d="M20 23c0-4-3-7-8-7 0 4 3 7 8 7z" fill="#a3431f"/>
+        </svg>
+        <span>Cosecha Justa</span>
+      </a>
+      <button type="button" class="menu-boton" aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span> Menú
+      </button>
+      <nav id="menu-principal" class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="producto.html">Producto</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="hero-foto" aria-labelledby="titulo-contacto">
+      <img src="img/contacto-mx.jpg" alt="Artesana purépecha sonriendo en Capácuaro, Michoacán" width="1600" height="1088">
+      <div class="contenedor hero-foto-texto">
+        <h1 id="titulo-contacto">Hablemos</h1>
+        <p>Respondemos en 48 horas.</p>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-medios">
+      <div class="contenedor">
+        <h2 id="titulo-medios" class="sr-only">Medios de contacto</h2>
+        <div class="rejilla">
+          <article class="tarjeta contacto-dato">
+            <h3>WhatsApp</h3>
+            <p><a href="tel:+525512345678">55 1234 5678</a></p>
+          </article>
+          <article class="tarjeta contacto-dato">
+            <h3>Correo</h3>
+            <p><a href="mailto:hola@cosechajusta.mx">hola@cosechajusta.mx</a></p>
+          </article>
+          <article class="tarjeta contacto-dato">
+            <h3>Horario</h3>
+            <p>Lun a sáb, 8 a 16 h</p>
+          </article>
+        </div>
+
+        <h2 class="separado">Escríbenos</h2>
+        <form id="form-contacto" class="formulario" action="#" method="post">
+          <div class="campo">
+            <label for="perfil">Me interesa</label>
+            <select id="perfil" name="perfil" required aria-describedby="error-perfil">
+              <option value="">Elige</option>
+              <option value="lote">Vender por lote</option>
+              <option value="taller">El taller</option>
+              <option value="comprar">Comprar</option>
+              <option value="otro">Otra cosa</option>
+            </select>
+            <p id="error-perfil" class="error" aria-live="polite"></p>
+          </div>
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="error-nombre">
+            <p id="error-nombre" class="error" aria-live="polite"></p>
+          </div>
+          <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <span id="ayuda-telefono" class="ayuda">10 números</span>
+            <input id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="ayuda-telefono error-telefono">
+            <p id="error-telefono" class="error" aria-live="polite"></p>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="3" required aria-describedby="error-mensaje"></textarea>
+            <p id="error-mensaje" class="error" aria-live="polite"></p>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primario">Enviar</button>
+          </div>
+          <div id="aviso-form" class="aviso" role="status" tabindex="-1"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>© 2026 Cosecha Justa. Maqueta académica · Diseñar para compartir, UVM.</p>
+      <ul>
+        <li><a href="accesibilidad.html">Declaración de accesibilidad</a></li>
+        <li><a href="accesibilidad.html#creditos">Créditos de fotos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
