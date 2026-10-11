@@ -1,0 +1,44 @@
+/* Encuesta de apps (Actividad 4). Usa los tokens de estilos.css. */
+
+.encuesta-intro { padding-bottom: 1.5rem; }
+.encuesta-intro + .seccion { border-top: 0; padding-top: 1rem; }
+.encuesta-progreso { font-size: 1.15rem; margin-top: 1.25rem; }
+.encuesta-progreso strong { color: var(--acento); font-size: 1.4rem; }
+.encuesta-nota { font-size: .95rem; color: var(--texto-suave); }
+
+.formulario .bloque {
+  display: grid; gap: 1rem;
+  background: var(--superficie); border: 1px solid var(--borde);
+  border-radius: var(--radio); padding: 1.25rem;
+}
+.formulario .bloque > legend {
+  float: left; width: 100%; font-size: 1.1rem; margin-bottom: .25rem;
+}
+.formulario .bloque > legend + * { clear: both; }
+.num {
+  display: inline-grid; place-items: center; width: 1.8rem; height: 1.8rem; margin-right: .35rem;
+  border-radius: 50%; background: var(--acento-2); color: #fff; font-size: .95rem;
+}
+html[data-contraste="activo"] .num { color: #000; }
+
+.chip:has(input:checked) { background: var(--texto); color: var(--fondo); border-color: var(--texto); }
+.chip:has(input:focus-visible) { outline: 3px solid var(--foco); outline-offset: 3px; }
+
+.respuestas { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1rem; }
+.respuesta {
+  background: var(--superficie); border: 1px solid var(--borde);
+  border-radius: var(--radio); padding: 1rem 1.25rem;
+}
+.respuesta h3 { font-size: 1.1rem; margin-bottom: .4rem; }
+.respuesta p { margin: 0 0 .35rem; font-size: 1rem; }
+.respuesta .cita { font-style: italic; color: var(--texto-suave); }
+.respuesta .btn-quitar {
+  margin-top: .5rem; font: inherit; font-size: .95rem; min-height: 44px; padding: .4rem .9rem;
+  background: transparent; color: var(--acento-2); border: 2px solid var(--borde); border-radius: var(--radio); cursor: pointer;
+}
+
+.acciones-encuesta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.acciones-encuesta[hidden] { display: none; }
+.btn-borrar { background: transparent; color: var(--acento-2); border-color: var(--acento-2); }
+.btn-borrar:hover { background: var(--acento-2); color: #fff; }
+#aviso-acciones { margin-top: 1rem; }
